@@ -1,0 +1,151 @@
+/********************************* VARIÁVEIS **********************************/
+
+:root {
+	/* Cores básicas */
+	--color-paper: #FFFFFF;
+	--color-ink: #15171C;
+	--color-slate: #5A6472;
+	--color-mist: #EEF0F3;
+	--color-line: #E2E5EA;
+	--color-signal: #E5372A;
+
+	/* Cores temáticas */
+	--theme-tecnologia: #2F6BEB;
+	--theme-negocios: #C07A12;
+	--theme-ciencia: #0F8C7E;
+	--theme-cultura: #B8348F;
+	--theme-opiniao: #5A6472;
+
+	/* Fontes */
+	--serif: Newsreader, serif;
+	--sans-serif: Inter, sans-serif;
+
+	/* Sombras */
+	--shadow: 4px 4px, 6px, 2px rgba(0, 0, 0, 0.5);
+
+	/* Tamanho/Espaçamento */
+	--size-xs: 0.25rem;
+	--size-s: 0.5rem;
+	--size-ms: 0.75rem;
+	--size-m: 1rem;
+	--size-ml: 1.25rem;
+	--size-l: 1.5rem;
+	--size-xl: 1.75rem;
+	--size-xxl: 2rem;
+	--size-jumbo: 4rem;
+
+	/* Z-index */
+	--zindex-closest: 100;
+	--zindex-close: 50;
+	--zindex-neutral: 0;
+	--zindex-far: -50;
+	--zindex-farthest: -100;
+}
+
+/********************************** CLASSES ***********************************/
+
+.container {
+	max-width: 1080px;
+	margin: 0 auto;
+}
+
+.tag-tema {
+	width: fit-content;
+	font-family: var(--sans-serif);
+	color: var(--color-paper);
+	padding: var(--size-s);
+	border-radius: var(--size-jumbo);
+}
+
+.tecnologia {
+	background-color: var(--theme-tecnologia);
+}
+
+.negocios {
+	background-color: var(--theme-negocios);
+}
+
+.ciencia {
+	background-color: var(--theme-ciencia)
+}
+
+.cultura {
+	background-color: var(--theme-cultura)
+}
+
+.opiniao {
+	background-color: var(--theme-opiniao)
+}
+
+/* Componentes */
+
+.ArtigoPrincipal {
+	width: 70%;
+	padding: var(--size-m);
+	border-radius: var(--size-xs);
+	box-shadow: 1px 1px 1px 2px #0002;
+	margin: var(--size-l);
+}
+
+.ArtigoPrincipal-tag {
+	margin: var(--size-s) 0;
+}
+
+/********************************* ELEMENTOS **********************************/
+
+/* Elementos Globais */
+html {
+	background-color: var(--color-paper);
+	color: var(--color-slate);
+}
+
+img {
+	display: block;
+	width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--serif);
+	color: var(--color-ink);
+}
+
+p {
+	font-family: var(--sans-serif);
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	box-shadow: 1px 1px 2px 0px #000;
+	margin-bottom: var(--size-l);
+}
+
+main {
+	padding: 0 var(--size-m);
+}
+
+/* Elementos Locais */
+form#newsletter {
+	padding: var(--size-m);
+	color: var(--color-mist);
+	border-radius: var(--size-xs);
+	background-color: var(--color-slate);
+	text-align: center;
+}
+
+form#newsletter hgroup,
+form#newsletter h3 {
+	color: var(--color-mist);
+	text-align: center;
+}
+
+footer {
+	margin: var(--size-l) 0;
+	font-size: var(--size-ms);
+	text-align: center;
+}
