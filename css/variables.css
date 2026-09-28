@@ -1,0 +1,38 @@
+:root {
+	/* Cores básicas */
+	--paper: #FFFFFF;
+	--ink: #15171C;
+	--slate: #5A6472;
+	--mist: #EEF0F3;
+	--line: #E2E5EA;
+	--signal: #E5372A;
+
+	/* Cores temáticas */
+	--theme-tecnologia: #2F6BEB;
+	--theme-negocios: #C07A12;
+	--theme-ciencia: #0F8C7E;
+	--theme-cultura: #B8348F;
+	--theme-opiniao: #5A6472;
+
+	/* Fontes */
+	--serif: Newsreader, serif;
+	--sans-serif: Inter, sans-serif;
+
+	/* Tamanho/Espaçamento */
+	--size-xs: 0.25rem;
+	--size-s: 0.5rem;
+	--size-ms: 0.75rem;
+	--size-m: 1rem;
+	--size-ml: 1.25rem;
+	--size-l: 1.5rem;
+	--size-xl: 1.75rem;
+	--size-xxl: 2rem;
+	--size-jumbo: 4rem;
+
+	/* Z-index */
+	--zindex-closest: 100;
+	--zindex-close: 50;
+	--zindex-neutral: 0;
+	--zindex-far: -50;
+	--zindex-farthest: -100;
+}

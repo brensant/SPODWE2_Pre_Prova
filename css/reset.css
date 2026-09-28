@@ -1,8 +1,12 @@
-* {
+*, *::before, *::after {
 	box-sizing: border-box;
 	border: none;
 	padding: 0;
 	list-style: none;
 	margin: 0;
-	/* border: solid 1px #0004; */
+}
+
+img {
+	display: block;
+	max-width: 100%;
 }

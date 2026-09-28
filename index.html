@@ -5,42 +5,48 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+	<!-- Tipografia -->
 	<link href="https://fonts.googleapis.com/css2?family=Newsreader&family=Inter&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/index.css">
 
-	<title>Via • Underground</title>
+	<!-- <link rel="stylesheet" href="css/reset.css"> -->
+	<link rel="stylesheet" href="css/variables.css">
+	<link rel="stylesheet" href="css/pages/home.css">
+
+	<script src="./js/main.js" type="module"></script>
+
+	<title>Via Underground | Home</title>
 </head>
 
 <body>
 	<header>
-		<span>AO VIVO</span>
-		<h1>Via • Underground</h1>
-
-		<button>TEMA<!-- Toggle tema claro/escuro --></button>
+		<div>
+			<span>Ao Vivo</span>
+			<span id="date">27 de setembro de 2026</span>
+			<span id="time">27 de setembro de 2026</span>
+			<button>Modo Escuro<!-- Toggle tema claro/escuro --></button>
+		</div>
+		<div>
+			<h1>Via Underground</h1>
+		</div>
 	</header>
-	<main class="container">
-		<!-- Artigo destaque -->
-		<article class="ArtigoPrincipal">
-			<img src="img/thumb-grafite.jpg" alt="Grafite dos gemeos em Lisboa" class="ArtigoPrincipal-img">
-			<p class="ArtigoPrincipal-tag tag-tema cultura">Cultura</p>
-			<hgroup class="ArtigoPrincipal-hgroup">
-				<h2 class="ArtigoPrincipal-titulo">Artistas de rua mais famosos de São Paulo</h2>
-				<p class="ArtigoPrincipal-info">Por <strong>Breno Silva</strong> | 21 set 2026 | 8 min de leitura</p>
+	<main>
+
+		<!-- Artigo em destaque -->
+		<article class="latest-article" id="latest-article">
+			<img class="latest-article__img">
+			<p class="latest-article__tag"></p>
+			<hgroup class="latest-article__hgroup">
+				<h2 class="latest-article__h2"></h2>
+				<p class="latest-article__info">Por <strong class="latest-article__autor"></strong> | <span class="latest-article__date"></span> | <span class="latest-article__read-time"></span> min de leitura</p>
 			</hgroup>
-			<p class="ArtigoPrincipal-previa">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod accusamus incidunt unde magnam illum! Fugit
-				officiis, recusandae perspiciatis, in aspernatur tenetur ipsa voluptatibus rerum rem laboriosam ea quis,
-				reiciendis possimus!
-				Corporis, sapiente harum? Error quidem voluptatibus ad quae, delectus officiis, eligendi, vero ea sit
-				est animi officia accusamus doloribus repudiandae iste. Obcaecati deleniti ipsa repudiandae incidunt
-				harum voluptate doloribus perferendis...</p>
+			<p class="latest-article__text"></p>
 		</article>
 
 		<!-- Seção de últimos artigos -->
 		<section>
 			<h2>Últimos Artigos</h2>
 			<menu>
-				<li class="">Todas</li>
+				<li>Todos</li>
 				<li>Tecnologia</li>
 				<li>Negócios</li>
 				<li>Ciência</li>
@@ -49,14 +55,15 @@
 			</menu>
 
 			<!-- Vários cards de artigos aqui -->
+			<div id="article-grid"></div>
 
 			<button>Carregar mais</button>
 		</section>
 
-		<form id="newsletter">
+		<form>
 			<hgroup>
 				<h3>Receba atualizações semanais do no seu e-mail</h3>
-				<p>Um resumo das nossas publicações toda sexta-feira. Sem spam.</p>
+				<p>Toda sexta-feira você recebe um compilado das nossas publicações. Sem spam.</p>
 			</hgroup>
 			<input type="email">
 			<button>Assinar</button>
@@ -66,6 +73,7 @@
 	<aside>
 
 	</aside>
+
 	<footer>
 		<p>© 2026. Via • Underground. Todos os diretos reservados.</p>
 	</footer>
