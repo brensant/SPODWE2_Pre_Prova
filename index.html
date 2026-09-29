@@ -5,77 +5,89 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<!-- Tipografia -->
-	<link href="https://fonts.googleapis.com/css2?family=Newsreader&family=Inter&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/home.css">
 
-	<!-- <link rel="stylesheet" href="css/reset.css"> -->
-	<link rel="stylesheet" href="css/variables.css">
-	<link rel="stylesheet" href="css/pages/home.css">
-
-	<script src="./js/main.js" type="module"></script>
+	<script src="./js/script.js" type="module"></script>
 
 	<title>Via Underground | Home</title>
 </head>
 
 <body>
 	<header>
-		<div>
-			<span>Ao Vivo</span>
-			<span id="date">27 de setembro de 2026</span>
-			<span id="time">27 de setembro de 2026</span>
-			<button>Modo Escuro<!-- Toggle tema claro/escuro --></button>
+		<div class="top-bar">
+			<span class="top-bar__live"><span class="top-bar__live--signal">•</span> Ao Vivo</span>
+			<span class="top-bar__date" id="date"></span>
+			<span class="top-bar__date" id="time"></span>
+			<button type="button" class="top-bar__theme-button" id="theme-toggle" aria-label="Ativar tema escuro" title="Alternar tema"></button>
 		</div>
 		<div>
 			<h1>Via Underground</h1>
 		</div>
 	</header>
 	<main>
-
-		<!-- Artigo em destaque -->
-		<article class="latest-article" id="latest-article">
-			<img class="latest-article__img">
-			<p class="latest-article__tag"></p>
-			<hgroup class="latest-article__hgroup">
-				<h2 class="latest-article__h2"></h2>
-				<p class="latest-article__info">Por <strong class="latest-article__autor"></strong> | <span class="latest-article__date"></span> | <span class="latest-article__read-time"></span> min de leitura</p>
-			</hgroup>
-			<p class="latest-article__text"></p>
-		</article>
+		<section>
+			<h2>Artigo em destaque</h2>
+			<!-- Artigo em destaque -->
+			<a href="">
+				<article href="" class="latest-article" id="latest-article">
+					<img class="latest-article__img">
+					<p class="latest-article__tag tag"></p>
+					<hgroup class="latest-article__hgroup">
+						<h2 class="latest-article__h2"></h2>
+						<p class="latest-article__info">Por
+							<strong class="latest-article__autor"></strong> |
+							<span class="latest-article__date"></span> |
+							<span class="latest-article__read-time"></span>
+							min de leitura
+						</p>
+					</hgroup>
+					<p class="latest-article__text"></p>
+				</article>
+			</a>
+		</section>
 
 		<!-- Seção de últimos artigos -->
 		<section>
 			<h2>Últimos Artigos</h2>
-			<menu>
-				<li>Todos</li>
-				<li>Tecnologia</li>
-				<li>Negócios</li>
-				<li>Ciência</li>
-				<li>Cultura</li>
-				<li>Opinião</li>
+			<menu class="filters" id="filters" aria-label="Filtrar artigos por categoria">
+				<li>
+					<button class="filters-tag is-active" type="button" data-category="all" aria-pressed="true">Todos</button>
+				</li>
+				<li>
+					<button class="filters-tag" type="button" data-category="1" aria-pressed="false">Tecnologia</button>
+				</li>
+				<li>
+					<button class="filters-tag" type="button" data-category="2" aria-pressed="false">Negócios</button>
+				</li>
+				<li>
+					<button class="filters-tag" type="button" data-category="3" aria-pressed="false">Ciência</button>
+				</li>
+				<li>
+					<button class="filters-tag" type="button" data-category="4" aria-pressed="false">Cultura</button>
+				</li>
+				<li>
+					<button class="filters-tag" type="button" data-category="5" aria-pressed="false">Opinião</button>
+				</li>
 			</menu>
 
-			<!-- Vários cards de artigos aqui -->
-			<div id="article-grid"></div>
+			<div id="article-grid"><!-- Vários cards de artigos aqui --></div>
 
-			<button>Carregar mais</button>
+			<button type="button" id="load-more-button">Carregar mais</button>
 		</section>
 
-		<form>
-			<hgroup>
-				<h3>Receba atualizações semanais do no seu e-mail</h3>
-				<p>Toda sexta-feira você recebe um compilado das nossas publicações. Sem spam.</p>
+		<form class="newsletter-form">
+			<hgroup class="newsletter-form__hgroup">
+				<h3 class="newsletter-form__h3">Assine nossa newsletter!</h3>
+				<p class="newsletter-form__p">Toda sexta-feira um compilado das nossas publicações no seu e-mail. Sem spam.</p>
 			</hgroup>
-			<input type="email">
-			<button>Assinar</button>
+			<label class="newsletter-form__label" for="input-email"><input type="email" class="newsletter-form__input" id="input-email" placeholder="example@email.com"></label>
+			<button type="submit" class="newsletter-form__button">Assinar</button>
 		</form>
 	</main>
 
-	<aside>
-
-	</aside>
-
 	<footer>
-		<p>© 2026. Via • Underground. Todos os diretos reservados.</p>
+		<p class="copyright">© 2026. Via Underground. Todos os diretos reservados.</p>
 	</footer>
 </body>
 
